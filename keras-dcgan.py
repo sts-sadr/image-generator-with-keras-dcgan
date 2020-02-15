@@ -110,7 +110,7 @@ def main():
     discriminator.compile(loss='binary_crossentropy', optimizer=Adam(lr=0.0002, beta_1=0.5))
     print(discriminator.summary())
 
-    for i in range(30 * 1000):
+    for i in range(1000):
         batch_images = image_batch(batch_size)
         noise = np.random.uniform(size=[batch_size, 100], low=-1.0, high=1.0)
         generated_images = generator.predict(noise)
